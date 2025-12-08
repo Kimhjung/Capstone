@@ -10,6 +10,8 @@
 #include "EnhancedInputComponent.h"
 #include "Kismet/KismetMathLibrary.h"
 
+class UCharacterMovementComponent;
+
 // Sets default values
 ABaseChar::ABaseChar()
 {
