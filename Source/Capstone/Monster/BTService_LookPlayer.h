@@ -13,7 +13,6 @@ UCLASS()
 class CAPSTONE_API UBTService_LookPlayer : public UBTService_BlackboardBase
 {
 	GENERATED_BODY()
-	
 public:
 
 	UBTService_LookPlayer();

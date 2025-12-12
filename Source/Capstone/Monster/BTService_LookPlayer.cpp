@@ -37,4 +37,3 @@ void UBTService_LookPlayer::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* N
 
 	}
 }
-

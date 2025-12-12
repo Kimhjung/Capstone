@@ -13,8 +13,6 @@ enum class ECondition : uint8
 	LessThan = 0  UMETA(DisplayName = "<"),
 	GraterThan = 1  UMETA(DisplayName = ">"),
 };
-
-
 /**
  * 
  */

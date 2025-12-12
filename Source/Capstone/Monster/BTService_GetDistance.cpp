@@ -23,6 +23,5 @@ void UBTService_GetDistance::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* 
 		float Distance = FVector::Dist2D(MonsterLocation, PlayerLocation);
 
 		UE_LOG(LogTemp, Warning, TEXT("UBTService_GetDistance %f"), Distance);
-
 	}
 }

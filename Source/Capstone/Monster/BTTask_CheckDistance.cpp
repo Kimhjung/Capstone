@@ -47,4 +47,3 @@ EBTNodeResult::Type UBTTask_CheckDistance::ExecuteTask(UBehaviorTreeComponent& O
 
 	return EBTNodeResult::Type();
 }
-

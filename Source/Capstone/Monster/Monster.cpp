@@ -2,19 +2,19 @@
 
 
 #include "Monster.h"
+#include "Components/CapsuleComponent.h"
 #include "Engine/DamageEvents.h"
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "GameFramework/CharacterMovementComponent.h"
-#include "MonAIC.h"
+//#include "MonAIC.h"
 
 // Sets default values
 AMonster::AMonster()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
-	AMonAIC* AIC = Cast<AMonAIC>(StaticClass());
+	
 }
 
 // Called when the game starts or when spawned
@@ -83,11 +83,11 @@ float AMonster::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, 
 		//네트워크 할려면 다 RPC로 작업해 됨
 		//DoDead();
 		SetState(EMonsterState::Death);
-		AMonAIC* AIC = Cast<AMonAIC>(GetController());
+		/*AMonAIC* AIC = Cast<AMonAIC>(GetController());
 		if (AIC)
 		{
 			AIC->SetState(EMonsterState::Death);
-		}
+		}*/
 	}
 	return DamageAmount;
 }

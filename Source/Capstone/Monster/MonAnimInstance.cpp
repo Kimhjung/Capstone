@@ -13,8 +13,16 @@ void UMonAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 	if (Monster)
 	{
 		Speed = Monster->GetCharacterMovement()->Velocity.Size2D();
-		CurrentState = Monster->CurrentState;
-		BossSkill = Monster->BossSkill;
+		if (Monster->CurrentHP <= 0)
+		{
+			CurrentState = EMonsterState::Death;
+		}
+		else
+		{
+			CurrentState = Monster->CurrentState;
+			BossSkill = Monster->BossSkill;
+		}
+		
 	}
 
 }

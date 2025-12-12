@@ -13,7 +13,9 @@ UCLASS()
 class CAPSTONE_API UBTService_GetDistance : public UBTService_BlackboardBase
 {
 	GENERATED_BODY()
+
 public:
+
 	UBTService_GetDistance();
 
 	virtual void TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds) override;
