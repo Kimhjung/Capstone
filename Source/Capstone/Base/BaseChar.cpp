@@ -20,6 +20,9 @@ ABaseChar::ABaseChar()
 
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
 	SpringArm->SetupAttachment(GetCapsuleComponent());
+	SpringArm->SetRelativeRotation(FRotator(-80.0f, 0, 0));
+	SpringArm->TargetArmLength = 1000.0f;
+	SpringArm->bUsePawnControlRotation = false;
 
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 	Camera->SetupAttachment(SpringArm);
